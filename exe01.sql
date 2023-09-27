@@ -4,7 +4,7 @@ create database db_departamentopessoal;
 use db_departamentopessoal;
 
 -- Crie uma tabela de colaboradores e determine 5 atributos relevantes dos colaboradores para se trabalhar com o serviço deste RH.
-create table tb_colaboradores(id int auto_increment, nome varchar(255), cargo varchar(255), salario decimal(10,2), departamento varchar(255), primary key(id));
+create table tb_colaboradores(id int not null auto_increment, nome varchar(255) not null, cargo varchar(255) not null, salario decimal(10,2) not null, departamento varchar(255) not null, primary key(id));
 
 -- Insira nesta tabela no mínimo 5 dados (registros).
 insert into tb_colaboradores(nome, cargo, salario, departamento) values
@@ -22,4 +22,7 @@ select * from tb_colaboradores where salario < 2000.00;
 
 -- Ao término atualize um registro desta tabela através de uma query de atualização.
 update tb_colaboradores set salario = 1999.99, cargo = "Vigia" where id = 1;
-select * from tb_colaboradores;
+SELECT 
+    *
+FROM
+    tb_colaboradores;

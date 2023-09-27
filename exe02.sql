@@ -33,4 +33,8 @@ select * from tb_produtos where preco > 500.00;
 select * from tb_produtos where preco < 500.00;
 
 -- Ao término atualize um registro desta tabela através de uma query de atualização.
-update tb_produtos set quantidade = 400 where id = 7;
+UPDATE tb_produtos 
+SET 
+    quantidade = 400
+WHERE
+    id = 7;
